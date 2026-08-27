@@ -119,48 +119,46 @@ export default function LandingPage() {
                 <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", alignItems: "center", maxWidth: "440px", width: "100%", background: "rgba(18, 22, 33, 0.6)", backdropFilter: "blur(24px)", WebkitBackdropFilter: "blur(24px)", border: "1px solid rgba(255, 255, 255, 0.08)", borderRadius: "28px", padding: "40px 24px", boxShadow: "0 25px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1)" }}>
 
                     {/* Floating Logo */}
-                    <div style={{ animation: "float 4s ease-in-out infinite", marginBottom: "20px" ,borderRadius:"100%" }}>
+                    <div style={{ animation: "float 4s ease-in-out infinite", marginBottom: "20px", borderRadius: "100%" }}>
                         <img src="https://i.ibb.co/C3MnW05j/Logo.jpg" alt="DTBOSS Logo" style={{ width: "95px", height: "95px", objectFit: "contain", filter: "drop-shadow(0 0 20px rgba(255,106,0,0.6))", borderRadius: "100%" }} />
                     </div>
 
                     <h1 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: "32px", fontWeight: 900, lineHeight: 1.2, marginBottom: "12px", textTransform: "uppercase" }}>
-                        SEE UPCOMING <br />
+                        ANALYZE DATA <br />
                         <span style={{ background: "linear-gradient(90deg, #ff6a00, #ffd700, #ff6a00)", backgroundSize: "200% auto", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", animation: "shimmer 3s linear infinite" }}>
-                            RESULTS INSTANTLY
+                            PATTERNS INSTANTLY
                         </span>
                     </h1>
 
                     <p style={{ color: "var(--text)", fontSize: "16px", marginBottom: "25px", lineHeight: 1.6, padding: "0 10px" }}>
-                        Download our VIP Mod APKs. Activate your private access key, and view the exact upcoming game results before they happen.
+                        Access our advanced data sequence algorithms. Activate your private dashboard, and analyze real-time statistical patterns instantly.
                     </p>
 
                     {/* Clean 3-Step Process */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: "14px", width: "100%", marginBottom: "30px", textAlign: "left", padding: "0 10px", background: "rgba(0,0,0,0.2)", borderRadius: "16px", paddingBlock: "18px" }}>
-                        <div style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "15px", color: "#e8eaf0", fontWeight: 600 }}>
-                            <span style={{ background: "rgba(34, 158, 217, 0.15)", color: "#229ED9", width: "32px", height: "32px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(34,158,217,0.3)" }}>1️⃣</span>
-                            Download Latest Mod APKs
-                        </div>
-                        <div style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "15px", color: "#e8eaf0", fontWeight: 600 }}>
-                            <span style={{ background: "rgba(34, 158, 217, 0.15)", color: "#229ED9", width: "32px", height: "32px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(34,158,217,0.3)" }}>2️⃣</span>
-                            Login & Activate VIP Key
-                        </div>
-                        <div style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "15px", color: "#e8eaf0", fontWeight: 600 }}>
-                            <span style={{ background: "rgba(74, 222, 128, 0.15)", color: "#4ade80", width: "32px", height: "32px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(74, 222, 128, 0.4)", boxShadow: "0 0 15px rgba(74, 222, 128, 0.2)" }}>3️⃣</span>
-                            See Results & Win Daily
-                        </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "15px", color: "#e8eaf0", fontWeight: 600 }}>
+                        <span style={{ background: "rgba(34, 158, 217, 0.15)", color: "#229ED9", width: "32px", height: "32px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(34,158,217,0.3)" }}>1️⃣</span>
+                        Download the Analytics App
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "15px", color: "#e8eaf0", fontWeight: 600 }}>
+                        <span style={{ background: "rgba(34, 158, 217, 0.15)", color: "#229ED9", width: "32px", height: "32px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(34,158,217,0.3)" }}>2️⃣</span>
+                        Login & Sync Your Data
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "14px", fontSize: "15px", color: "#e8eaf0", fontWeight: 600 }}>
+                        <span style={{ background: "rgba(74, 222, 128, 0.15)", color: "#4ade80", width: "32px", height: "32px", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(74, 222, 128, 0.4)", boxShadow: "0 0 15px rgba(74, 222, 128, 0.2)" }}>3️⃣</span>
+                        View Statistical Sequences
                     </div>
 
                     {/* The Magic Pulsing Button */}
                     <button onClick={handleJoinClick} style={{ width: "100%", background: "linear-gradient(135deg, #1fa2ff, #0055cc)", color: "#fff", padding: "18px 24px", borderRadius: "16px", border: "1px solid rgba(255,255,255,0.2)", fontSize: "16px", fontFamily: "'Orbitron', sans-serif", fontWeight: "bold", letterSpacing: "1px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: "12px", animation: "pulseRing 2s infinite", transition: "transform 0.2s ease", boxShadow: "inset 0 2px 0 rgba(255,255,255,0.2), 0 10px 30px rgba(34,158,217,0.4)" }} onMouseOver={(e) => e.currentTarget.style.transform = "scale(1.03)"} onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}>
                         <img src="https://dtbosshub.com/icons/telegram.png" alt="" style={{ width: "26px", height: "26px" }} />
-                        GET THE APPS ON TELEGRAM
+                        JOIN OFFICIAL COMMUNITY
                     </button>
 
                     {/* ⭐ Beautiful Reviews Section */}
                     <div style={{ marginTop: "30px", width: "100%", background: "rgba(0,0,0,0.4)", borderRadius: "20px", padding: "18px", border: "1px solid rgba(255,255,255,0.05)" }}>
                         <p style={{ fontSize: "11px", color: "var(--gold)", marginBottom: "16px", fontWeight: "bold", letterSpacing: "1px", textTransform: "uppercase", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
                             <span style={{ width: "6px", height: "6px", background: "var(--gold)", borderRadius: "50%", display: "inline-block" }}></span>
-                            Recent VIP Winners
+                            Recent Active Users
                         </p>
 
                         {/* Review 1 */}
@@ -171,8 +169,7 @@ export default function LandingPage() {
                                     <span style={{ fontSize: "14px", fontWeight: "bold", color: "#fff", display: "flex", alignItems: "center", gap: "4px" }}>Rahul S. <span style={{ fontSize: "10px" }}>✔️</span></span>
                                     <span style={{ fontSize: "11px", color: "#4ade80", fontWeight: 600 }}>Just now</span>
                                 </div>
-                                <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.5 }}>"Bought the Colour Prediction key. Won ₹18,000 in my first 4 bets! Insane accuracy."</p>
-                            </div>
+                                <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.5 }}>"Got the data sequence tool. The analytical accuracy over the last 4 days has been insane! Highly recommend."</p>                            </div>
                         </div>
 
                         {/* Review 2 */}
@@ -183,7 +180,7 @@ export default function LandingPage() {
                                     <span style={{ fontSize: "14px", fontWeight: "bold", color: "#fff", display: "flex", alignItems: "center", gap: "4px" }}>Amit K. <span style={{ fontSize: "10px" }}>✔️</span></span>
                                     <span style={{ fontSize: "11px", color: "#4ade80", fontWeight: 600 }}>10 mins ago</span>
                                 </div>
-                                <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.5 }}>"100% legit. The WinGo hack works perfectly. Withdrew ₹40k yesterday."</p>
+                                <p style={{ fontSize: "13px", color: "var(--muted)", margin: 0, lineHeight: 1.5 }}>"100% legit utility. The sequence analyzer works perfectly and runs flawlessly on my phone."</p>
                             </div>
                         </div>
                     </div>
