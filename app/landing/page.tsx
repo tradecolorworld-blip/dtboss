@@ -201,7 +201,7 @@ export default function LandingPage() {
                 {/* Live Members Bottom Sticky */}
                 <div style={{ position: "fixed", bottom: "30px", zIndex: 50, display: "flex", alignItems: "center", gap: "10px", background: "rgba(10, 15, 25, 0.8)", padding: "12px 24px", borderRadius: "50px", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(15px)", WebkitBackdropFilter: "blur(15px)", boxShadow: "0 10px 30px rgba(0,0,0,0.5)" }}>
                     <span style={{ width: "12px", height: "12px", background: "#4ade80", borderRadius: "50%", animation: "blink 2s infinite", boxShadow: "0 0 12px #4ade80" }}></span>
-                    <span style={{ fontSize: "14px", color: "#e8eaf0", fontWeight: 600, fontFamily: "'Rajdhani', sans-serif", letterSpacing: "0.5px" }}>17,452 VIP Members Active</span>
+                    <span style={{ fontSize: "14px", color: "#e8eaf0", fontWeight: 600, fontFamily: "'Rajdhani', sans-serif", letterSpacing: "0.5px" }}>7,452 VIP Members Active</span>
                 </div>
 
             </div>
