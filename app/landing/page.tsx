@@ -36,9 +36,16 @@ export default function LandingPage() {
     };
 
     // ── 3. THE 100% ACCURATE DEEP LINK ENGINE ──
-    const handleJoinClick = async (e: React.MouseEvent) => {
+    const handleJoinClick = (e: React.MouseEvent) => {
         e.preventDefault();
-        await trackEvent("button_click");
+
+        // 1. Fire Meta Pixel directly in browser (Instant attribution)
+        if (typeof window !== "undefined" && (window as any).fbq) {
+            (window as any).fbq("track", "Lead");
+        }
+
+        // 2. Fire backend CAPI with cookies for high match quality
+        trackEvent("lead_click");
 
         const fallbackUrl = "/";
         const iosUrl = `tg://resolve?domain=${telegramUsername}`;
@@ -46,36 +53,22 @@ export default function LandingPage() {
         const webUrl = `https://t.me/${telegramUsername}`;
 
         if (deviceInfo === "Desktop") {
-            await trackEvent("telegram_desktop_click");
             window.location.href = webUrl;
             return;
         }
 
-        let appOpened = false;
-        let timeoutId: NodeJS.Timeout;
+        if (deviceInfo === "Android") {
+            window.location.href = androidUrl;
+        } else if (deviceInfo === "iOS") {
+            window.location.href = iosUrl;
+        }
 
-        const handleVisibilityChange = () => {
-            if (document.hidden && !appOpened) {
-                appOpened = true;
-                clearTimeout(timeoutId);
-                trackEvent("telegram_success");
-                document.removeEventListener("visibilitychange", handleVisibilityChange);
-            }
-        };
-
-        document.addEventListener("visibilitychange", handleVisibilityChange);
-
-        if (deviceInfo === "Android") window.location.href = androidUrl;
-        else if (deviceInfo === "iOS") window.location.href = iosUrl;
-
-        timeoutId = setTimeout(() => {
-            if (!appOpened && !document.hidden) {
-                document.removeEventListener("visibilitychange", handleVisibilityChange);
-                trackEvent("telegram_failed");
-                trackEvent("redirect_main");
+        // Fallback after 2.5s if app didn't open
+        setTimeout(() => {
+            if (!document.hidden) {
                 window.location.href = fallbackUrl;
             }
-        }, 3000);
+        }, 2500);
     };
 
     return (
