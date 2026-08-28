@@ -29,7 +29,7 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-// Advanced SEO Metadata (For Google, WhatsApp, Facebook, Telegram)
+// SEO Metadata
 export const metadata: Metadata = {
   title: "DTBOSS MOD APK HUB - Download Premium Hacks",
   description: "Download Premium Mod APKs, Casino Hacks, and Colour Prediction Tools for Free. 100% Secure & Verified Algorithms.",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DTBOSS MOD APK HUB - Premium Hacks",
     description: "Download Premium Mod APKs, Casino Hacks, and Colour Prediction Tools for Free.",
-    url: "https://dtboss.sbs", // Change this to your real domain later
+    url: "https://dtboss.sbs",
     siteName: "DTBOSS",
     images: [
       {
@@ -58,18 +58,17 @@ export const metadata: Metadata = {
   },
 };
 
+const META_PIXEL_ID = "1258097689637106";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Your exact Meta Pixel ID
-  const META_PIXEL_ID = "1258097689637106";
-
   return (
     <html lang="en">
       <head>
-        {/* META PIXEL SCRIPT - Optimized for Next.js */}
+        {/* Meta Pixel Script */}
         <Script
           id="meta-pixel"
           strategy="afterInteractive"
@@ -90,8 +89,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${rajdhani.className} ${orbitron.variable} ${rajdhani.variable} ${spaceMono.variable} antialiased`}>
-
-        {/* FALLBACK PIXEL FOR USERS WITH JAVASCRIPT DISABLED */}
+        {/* Fallback for disabled JS */}
         <noscript>
           <img
             height="1"
